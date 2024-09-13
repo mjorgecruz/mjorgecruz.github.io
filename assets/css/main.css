@@ -104,7 +104,7 @@ input, select, textarea {
     padding: 0; /* Remove padding that might be causing spacing issues */
 }
 
-.spacing p {
+spacer {
 	padding-bottom: 20%;
 }
 
