@@ -104,49 +104,6 @@ input, select, textarea {
     padding: 0; /* Remove padding that might be causing spacing issues */
 }
 
-/* Step 1: Define the flex container */
-.post-container {
-    display: flex;
-    flex-wrap: wrap;   /* Allows cards to wrap if necessary */
-    justify-content: space-between; /* Adds space between cards */
-    gap: 20px;         /* Adjust the space between cards */
-    padding: 20px;     /* Add padding for better spacing */
-}
-
-/* Step 2: Define styles for each card */
-.post {
-    flex: 1 1 calc(33.333% - 20px); /* Each card takes up 1/3 of the width minus the gap */
-    background-color: #fff;  /* Card background color */
-    padding: 3em 3em 1em 3em; /* Combined padding */
-    border: solid 1px rgba(160, 160, 160, 0.3); /* Border */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Card shadow */
-    border-radius: 8px; /* Rounded corners */
-    display: flex;
-    flex-direction: column;  /* Stack content vertically */
-    justify-content: space-between; /* Spread content evenly */
-    margin: 0 0 3em 0;  /* Adjust margin for spacing */
-    position: relative; /* Positioning if needed */
-}
-
-/* Step 3: Ensure the image takes up full width */
-.post .image.featured img {
-    width: 100%; /* Ensure the image takes the full width of the card */
-    height: auto; /* Maintain aspect ratio */
-}
-
-/* Step 4: Make it responsive - stack cards on smaller screens */
-@media screen and (max-width: 1024px) {
-    .post {
-        flex: 1 1 calc(50% - 20px); /* On medium screens, 2 cards per row */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .post {
-        flex: 1 1 100%; /* On small screens, 1 card per row */
-    }
-}
-
 /* Basic */
 
 	@-ms-viewport {
@@ -2815,8 +2772,109 @@ input, select, textarea {
 		margin: 0 0 3em 0;
 		position: relative;
 	} */
+/* Container for posts, flexbox to arrange in columns */
+.post-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allows cards to wrap when needed */
+    justify-content: space-between; /* Space between cards */
+    gap: 20px; /* Adjust spacing between posts */
+    padding: 20px; /* Adds padding around the container */
+}
 
-		.post > header {
+/* Main post styling */
+.post {
+    flex: 1 1 calc(33.333% - 20px); /* 1/3 width minus the gap */
+    background-color: #fff;  /* Card background */
+    padding: 3em 3em 1em 3em;  /* Padding inside the card */
+    border: solid 1px rgba(160, 160, 160, 0.3);  /* Border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow */
+    border-radius: 8px;  /* Rounded corners */
+    display: flex;
+    flex-direction: column;  /* Vertical stacking */
+    justify-content: space-between;  /* Spread content vertically */
+    margin-bottom: 20px; /* Spacing between rows */
+    position: relative;
+}
+
+/* Header inside post */
+.post > header {
+    display: flex;
+    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+    left: -3em;
+    margin: -3em 0 3em 0;
+    position: relative;
+    width: calc(100% + 6em);
+}
+
+/* Title inside header */
+.post > header .title {
+    flex-grow: 1;
+    padding: 3.75em 3em 3.3em 3em;
+}
+
+/* Title h2 styling */
+.post > header .title h2 {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+/* Meta section inside header */
+.post > header .meta {
+    padding: 3.75em 3em 1.75em 3em;
+    border-left: solid 1px rgba(160, 160, 160, 0.3);
+    min-width: 17em;
+    text-align: right;
+    width: 17em;
+}
+
+/* Featured image inside post */
+.post > a.image.featured img {
+    width: 100%; /* Make sure image takes full width */
+    height: auto; /* Keep the aspect ratio */
+    transition: transform 0.2s ease-out;
+}
+
+.post > a.image.featured:hover img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Footer inside post */
+.post > footer {
+    display: flex;
+    align-items: center;
+}
+
+.post > footer .actions {
+    flex-grow: 1;
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 1024px) {
+    .post {
+        flex: 1 1 calc(50% - 20px); /* Two posts per row */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post {
+        flex: 1 1 100%; /* One post per row */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .post > header .meta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post > .image.featured {
+        margin-left: -1.5em;
+        margin-top: calc(-1.5em - 1px);
+        width: calc(100% + 3em);
+    }
+}
+		/* .post > header {
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -3096,7 +3154,7 @@ input, select, textarea {
 						padding: 0 0 0 1.25em;
 					}
 
-		}
+		} */
 
 /* Section/Article */
 
