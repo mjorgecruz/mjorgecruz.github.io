@@ -81,7 +81,7 @@ input, select, textarea {
 
 .side-by-side div {
     flex-grow: 1;  /* Let the text container take up the remaining space */
-    max-width: calc(100% - 220px); /* Subtract image width + gap to limit text width */
+    max-width: calc(33.333% - 20px); /* Subtract image width + gap to limit text width */
 }
 
 .side-by-side .image {
@@ -99,7 +99,7 @@ input, select, textarea {
 }
 
 .side-by-side .image.featured {
-    width: 35%;  /* Ensure the image only takes its natural width */
+    width: 100%;  /* Ensure the image only takes its natural width */
     margin: 0;  /* Remove any unwanted margins */
     padding: 0; /* Remove padding that might be causing spacing issues */
 }
