@@ -139,6 +139,12 @@ input, select, textarea {
 	color: rgb(88, 87, 87);
 	padding: 7px;
   }
+
+  .text {
+	font-weight: 600;
+	color: rgb(88, 87, 87);
+	padding: 7px;
+  }
   
   .heading:hover {
 	cursor: pointer;
