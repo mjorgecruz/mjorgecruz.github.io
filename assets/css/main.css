@@ -98,6 +98,12 @@ input, select, textarea {
     height: auto !important; /* This ensures the height scales proportionally */
 }
 
+.side-by-side .image.featured {
+    width: auto;  /* Ensure the image only takes its natural width */
+    margin: 0;  /* Remove any unwanted margins */
+    padding: 0;  /* Remove padding that might be causing spacing issues */
+}
+
 
 /* Basic */
 
