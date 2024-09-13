@@ -94,7 +94,7 @@ input, select, textarea {
 }
 
 .side-by-side .image img {
-    width: auto !important; /* Adjust this value to control the width */
+    width: 100% !important; /* Adjust this value to control the width */
     height: auto !important; /* This ensures the height scales proportionally */
 }
 
