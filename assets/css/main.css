@@ -95,7 +95,7 @@ input, select, textarea {
   .card-image {
 	background-color: rgb(236, 236, 236);
 	width: 100%;
-	height: calc(33.333% - 20px);
+	height: 200px;
 	border-radius: 6px 6px 0 0;
   }
 
