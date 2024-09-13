@@ -88,7 +88,7 @@ input, select, textarea {
 }
 
 .side-by-side .image img {
-    width: 200px; /* Adjust this value to control the width */
+    width: 100px; /* Adjust this value to control the width */
     height: auto; /* This ensures the height scales proportionally */
 }
 
