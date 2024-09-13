@@ -71,6 +71,22 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+/* ADDED */
+
+.side-by-side {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 20px; /* Space between the image and the text */
+}
+
+.side-by-side .image {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.side-by-side p {
+    flex-grow: 1; /* Allow the text to take up remaining space */
+}
+
 
 /* Basic */
 
