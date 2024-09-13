@@ -85,7 +85,8 @@ input, select, textarea {
 }
 
 .side-by-side .image {
-    flex-shrink: 0; /* Prevent the image from shrinking */
+    display: block;
+	flex-shrink: 0; /* Prevent the image from shrinking */
 }
 
 .side-by-side p {
