@@ -78,11 +78,6 @@ input, select, textarea {
     gap: 10px;  /* Reduce the gap between the image and text */
 }
 
-.side-by-side div {
-    flex-grow: 1;  /* Let the text container take up the remaining space */
-    max-width: 100%; /* Subtract image width + gap to limit text width */
-}
-
 .card {
 	width: calc(33.333% - 20px);
 	background: white;
