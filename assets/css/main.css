@@ -94,14 +94,14 @@ input, select, textarea {
 }
 
 .side-by-side .image img {
-    width: 200px !important; /* Adjust this value to control the width */
+    width: auto !important; /* Adjust this value to control the width */
     height: auto !important; /* This ensures the height scales proportionally */
 }
 
 .side-by-side .image.featured {
-    width: 45%;  /* Ensure the image only takes its natural width */
+    width: 35%;  /* Ensure the image only takes its natural width */
     margin: 0;  /* Remove any unwanted margins */
-    padding: 0;  /* Remove padding that might be causing spacing issues */
+    padding: 0; /* Remove padding that might be causing spacing issues */
 }
 
 
