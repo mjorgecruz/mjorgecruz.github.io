@@ -82,7 +82,8 @@ input, select, textarea {
 
 /* Card Styling */
 .card {
-    flex: 1 1 calc(33.333% - 20px); 
+    flex: 1 1 calc(33.333% - 20px);
+	display: flex;
 	flex-direction: column;  /* Stack elements vertically */
     justify-content: flex-start;/* Each card takes up 1/3 of the width minus gap */
     max-width: calc(33.333% - 20px); /* Ensure it never exceeds 1/3 */
