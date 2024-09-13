@@ -98,6 +98,16 @@ input, select, textarea {
 	height: calc(33.333% - 20px);
 	border-radius: 6px 6px 0 0;
   }
+
+  .card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the square without distortion */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+	}
   
   .card-image:hover {
 	transform: scale(0.98);
