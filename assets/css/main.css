@@ -75,8 +75,13 @@ input, select, textarea {
 
 .side-by-side {
     display: flex;
-    align-items: center; /* Align items vertically centered */
-    gap: 20px; /* Space between the image and the text */
+    align-items: center;  /* Aligns text and image vertically centered */
+    gap: 10px;  /* Reduce the gap between the image and text */
+}
+
+.side-by-side div {
+    flex-grow: 1;  /* Let the text container take up the remaining space */
+    max-width: calc(100% - 220px); /* Subtract image width + gap to limit text width */
 }
 
 .side-by-side .image {
