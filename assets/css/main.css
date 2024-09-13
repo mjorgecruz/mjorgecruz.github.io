@@ -151,6 +151,7 @@ input, select, textarea {
 	font-weight: 400;
 	font-size: 11px;
 	padding-top: 20px;
+	margin-top: auto;
   }
   
   .name {
