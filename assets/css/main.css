@@ -104,10 +104,6 @@ input, select, textarea {
     padding: 0; /* Remove padding that might be causing spacing issues */
 }
 
-spacer {
-	padding-bottom: 20px;
-}
-
 /* Basic */
 
 	@-ms-viewport {
