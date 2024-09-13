@@ -135,8 +135,10 @@ input, select, textarea {
   }
   
   .heading {
+	color: #646464;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 14pt;
 	font-weight: 600;
-	color: rgb(88, 87, 87);
 	padding: 7px;
   }
 
