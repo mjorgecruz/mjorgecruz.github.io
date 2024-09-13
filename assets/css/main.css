@@ -87,6 +87,11 @@ input, select, textarea {
     flex-grow: 1; /* Allow the text to take up remaining space */
 }
 
+.side-by-side .image img {
+    width: 200px; /* Adjust this value to control the width */
+    height: auto; /* This ensures the height scales proportionally */
+}
+
 
 /* Basic */
 
