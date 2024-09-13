@@ -109,19 +109,23 @@ input, select, textarea {
     display: flex;
     flex-wrap: wrap;   /* Allows cards to wrap if necessary */
     justify-content: space-between; /* Adds space between cards */
-    gap: 20px;         /* Optional: Adjust the space between cards */
+    gap: 20px;         /* Adjust the space between cards */
+    padding: 20px;     /* Add padding for better spacing */
 }
 
 /* Step 2: Define styles for each card */
 .post {
     flex: 1 1 calc(33.333% - 20px); /* Each card takes up 1/3 of the width minus the gap */
-    background-color: #fff;  /* Optional: Card background color */
-    padding: 20px;           /* Optional: Padding inside the card */
+    background-color: #fff;  /* Card background color */
+    padding: 3em 3em 1em 3em; /* Combined padding */
+    border: solid 1px rgba(160, 160, 160, 0.3); /* Border */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Card shadow */
-    border-radius: 8px;      /* Optional: Rounded corners */
+    border-radius: 8px; /* Rounded corners */
     display: flex;
-    flex-direction: column;  /* Ensure the card content is stacked vertically */
+    flex-direction: column;  /* Stack content vertically */
     justify-content: space-between; /* Spread content evenly */
+    margin: 0 0 3em 0;  /* Adjust margin for spacing */
+    position: relative; /* Positioning if needed */
 }
 
 /* Step 3: Ensure the image takes up full width */
@@ -2804,13 +2808,13 @@ input, select, textarea {
 
 /* Post */
 
-	.post {
+	/* .post {
 		padding: 3em 3em 1em 3em ;
 		background: #ffffff;
 		border: solid 1px rgba(160, 160, 160, 0.3);
 		margin: 0 0 3em 0;
 		position: relative;
-	}
+	} */
 
 		.post > header {
 			display: -moz-flex;
