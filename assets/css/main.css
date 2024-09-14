@@ -73,7 +73,39 @@ input, select, textarea {
 }
 /* ADDED */
 
+
 .side-by-side {
+    display: flex;
+    align-items: center;  /* Aligns text and image vertically centered */
+    gap: 10px;  /* Reduce the gap between the image and text */
+}
+
+.side-by-side div {
+    flex-grow: 1;  /* Let the text container take up the remaining space */
+    max-width: calc(100% - 220px); /* Subtract image width + gap to limit text width */
+}
+
+.side-by-side .image {
+    display: block;
+	flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.side-by-side p {
+    flex-grow: 1; /* Allow the text to take up remaining space */
+}
+
+.side-by-side .image img {
+    width: 100% !important; /* Adjust this value to control the width */
+    height: auto !important; /* This ensures the height scales proportionally */
+}
+
+.side-by-side .image.featured {
+    width: 35%;  /* Ensure the image only takes its natural width */
+    margin: 0;  /* Remove any unwanted margins */
+    padding: 0; /* Remove padding that might be causing spacing issues */
+}
+
+.side-to-side {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
     gap: 10px; /* Space between cards */
