@@ -100,7 +100,7 @@ input, select, textarea {
 }
 
 .side-by-side .image.featured {
-    width: 35%;  /* Ensure the image only takes its natural width */
+    width: 200px;  /* Ensure the image only takes its natural width */
     margin: 0;  /* Remove any unwanted margins */
     padding: 0; /* Remove padding that might be causing spacing issues */
 }
