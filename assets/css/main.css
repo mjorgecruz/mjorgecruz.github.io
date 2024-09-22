@@ -154,7 +154,39 @@ input, select, textarea {
 	color: rgb(63, 121, 230);
 	padding: 10px 7px 0;
   }
-  
+
+  .category1 {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 600;
+	color: rgb(63, 230, 133);
+	padding: 10px 7px 0;
+  }
+
+  .category2 {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 600;
+	color: rgb(185, 230, 63);
+	padding: 10px 7px 0;
+  }
+
+  .category3 {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 600;
+	color: rgb(230, 199, 63);
+	padding: 10px 7px 0;
+  }
+
+  .category4 {
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 600;
+	color: rgb(230, 74, 63);
+	padding: 10px 7px 0;
+  }
+
   .category:hover {
 	cursor: pointer;
   }
