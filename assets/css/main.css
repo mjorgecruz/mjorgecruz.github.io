@@ -27,7 +27,8 @@ section, summary, time, mark, audio, video {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+	display: block;
+}
 
 body {
 	line-height: 1;
@@ -73,7 +74,12 @@ input, select, textarea {
 }
 /* ADDED */
 
-
+.company {
+    width: 200px; /* or whatever width you want */
+    height: auto; /* maintains aspect ratio */
+	padding: 15px;
+	box-sizing: border-box;
+}
 .side-by-side {
     display: flex;
     align-items: center;  /* Aligns text and image vertically centered */
@@ -107,9 +113,8 @@ input, select, textarea {
 
 .side-to-side {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    /* flex-wrap: wrap; Allows wrapping on smaller screens */
     gap: 10px; /* Space between cards */
-    justify-content: space-between; /* Ensure space between cards */
 }
 
 /* Card Styling */
@@ -3459,7 +3464,6 @@ input, select, textarea {
 							top: 0;
 							width: inherit;
 						}
-
 		#header form {
 			margin: 0;
 		}
