@@ -113,7 +113,7 @@ input, select, textarea {
 
 .side-to-side {
     display: flex;
-    /* flex-wrap: wrap; Allows wrapping on smaller screens */
+    flex-wrap: wrap; Allows wrapping on smaller screens */
     gap: 10px; /* Space between cards */
 }
 
@@ -2909,6 +2909,10 @@ input, select, textarea {
 
 		@media screen and (max-width: 480px) {
 
+			.card {
+				flex: 1 1 100%; /* Each card takes up 100% of the width */
+				max-width: 100%; /* Ensure it never exceeds 100% */
+			}
 			.mini-posts {
 				display: block;
 				width: 100%;
