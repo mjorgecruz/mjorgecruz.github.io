@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/logo-no-background.png" type="image/x-icon" />
 	</head>
 	<body class="is-preload">
 
@@ -13,7 +14,13 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html"><img class="company" src="images/logo-no-background.png"/></a></h1>
+						<h1><a href="index.html"><img class="company" src="images/jorge-cruz-high-resolution-logo-transparent.webp"/></a></h1>
+						<script>
+							function toggleMenu() {
+								var menu = document.getElementById('mobile-menu');
+								menu.style.display = (menu.style.display === 'none'|| menu.style.display === '') ? 'block' : 'none';
+							}
+						</script>
 						<nav class="links">
 							<ul>
 								<li><a href="middle-42.html">42 Common Core</a></li>
@@ -21,6 +28,18 @@
 								<li><a href="middle-mec.html">Mechanical Engineering</a></li>
 								<li><a href="about.html">About Me</a></li>
 							</ul>
+						</nav>
+						<button class="hamburger" onclick="toggleMenu()">
+							<span class="hamburger-bar"></span>
+							<span class="hamburger-bar"></span>
+							<span class="hamburger-bar"></span>
+						</button>
+						
+						<nav id="mobile-menu" class="mobile-menu">
+							<p><a href="middle-42.html">42 Common Core</a></p>
+							<p><a href="middle-side.html">Additional Projects</a></p>
+							<p><a href="middle-mec.html">Mechanical Engineering</a></p>
+							<p><a href="about.html">About Me</a></p>
 						</nav>
 					</header>
 
@@ -90,8 +109,6 @@
 									<p>Mechanical Engineering projects</p>
 								</header>
 							</section>
-							<p>Here you can find all the projects I have done during my Master's in Mechanical Engineering</p>
-							
 						<!-- Footer -->
 							<section id="footer">
 								<ul class="icons">

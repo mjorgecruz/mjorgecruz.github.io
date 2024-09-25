@@ -6,15 +6,21 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/logo-no-background.png" type="image/x-icon" />
 	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html"><img class="company" src="images/logo-no-background.png"/></a></h1>
+						<h1><a href="index.html"><img class="company" src="images/jorge-cruz-high-resolution-logo-transparent.webp"/></a></h1> 
+						<script>
+							function toggleMenu() {
+								var menu = document.getElementById('mobile-menu');
+								menu.style.display = (menu.style.display === 'none'|| menu.style.display === '') ? 'block' : 'none';
+							}
+						</script>
 						<nav class="links">
 							<ul>
 								<li><a href="middle-42.html">42 Common Core</a></li>
@@ -22,6 +28,18 @@
 								<li><a href="middle-mec.html">Mechanical Engineering</a></li>
 								<li><a href="about.html">About Me</a></li>
 							</ul>
+						</nav>
+						<button class="hamburger" onclick="toggleMenu()">
+							<span class="hamburger-bar"></span>
+							<span class="hamburger-bar"></span>
+							<span class="hamburger-bar"></span>
+						</button>
+												
+						<nav id="mobile-menu" class="mobile-menu">
+							<p><a href="middle-42.html">42 Common Core</a></p>
+							<p><a href="middle-side.html">Additional Projects</a></p>
+							<p><a href="middle-mec.html">Mechanical Engineering</a></p>
+							<p><a href="about.html">About Me</a></p>
 						</nav>
 					</header>
 
@@ -262,19 +280,15 @@
 									<h2>Jorge Cruz</h2>
 									<p>Portfolio of programming projects, and other developed projects</p>
 								</header>
-							</section>
-
-						<!-- About -->
-							<section class="blurb">
-								<h2>About</h2>
+								<hr>
 								<p>I am a mechanical engineer with a masters in Automation always in search of knowledge and new challenges. I developed a great interest in programming, which made me pursuit this area as a possible carrer change, or as a complement to my degree in engineering.
 									I decided to take a year off work and I am currently a programming student at 42Porto.
 								</p>
 								<ul class="actions">
 									<li><a href="about.html" class="button">Learn More</a></li>
+									<li><a href="" class="button">CV</a></li>
 								</ul>
 							</section>
-
 						<!-- Footer -->
 							<section id="footer">
 								<ul class="icons">
