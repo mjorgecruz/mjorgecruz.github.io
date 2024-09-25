@@ -113,8 +113,9 @@ input, select, textarea {
 
 .side-to-side {
     display: flex;
-    flex-wrap: wrap; Allows wrapping on smaller screens */
-    gap: 10px; /* Space between cards */
+    flex-wrap: wrap;
+    gap: 20px;
+	justify-content: flex-start;
 }
 
 /* Card Styling */
@@ -2528,6 +2529,10 @@ input, select, textarea {
 
 				.image.featured {
 					margin: 0 0 1.5em 0;
+				}
+				.side-to-side {
+					flex-direction: column; /* Stack cards vertically */
+					gap: 20px; /* Add vertical space between the cards */
 				}
 
 			}
