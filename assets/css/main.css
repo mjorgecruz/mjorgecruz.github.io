@@ -127,6 +127,16 @@ input, select, textarea {
     box-sizing: border-box; /* Ensure padding and width are calculated correctly */
 }
 
+.text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+	text-overflow: ellipsis; 
+	margin-bottom: 1rem;
+	font-size: 1.01rem !important;
+    overflow: hidden;
+}
+
 .card-alt {
     flex: 1 1 calc(50% - 20px);
 	display: flex;
