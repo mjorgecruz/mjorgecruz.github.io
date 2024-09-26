@@ -1,6 +1,11 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
 
+/*
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -18,12 +23,11 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: middle;} 
+	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+	display: block;}
 
 body {
 	line-height: 1;
@@ -69,11 +73,7 @@ input, select, textarea {
 }
 /* ADDED */
 
-.company {
-    width: auto; /* or whatever width you want */
-    height: 1rem; /* maintains aspect ratio */
-	box-sizing: border-box;
-}
+
 .side-by-side {
     display: flex;
     align-items: center;  /* Aligns text and image vertically centered */
@@ -107,9 +107,9 @@ input, select, textarea {
 
 .side-to-side {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-	justify-content: flex-start;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 10px; /* Space between cards */
+    justify-content: space-between; /* Ensure space between cards */
 }
 
 /* Card Styling */
@@ -119,30 +119,6 @@ input, select, textarea {
 	flex-direction: column;  /* Stack elements vertically */
     justify-content: flex-start;/* Each card takes up 1/3 of the width minus gap */
     max-width: calc(33.333% - 20px); /* Ensure it never exceeds 1/3 */
-    background: white;
-    padding: .4em;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding-bottom: 20px;
-    box-sizing: border-box; /* Ensure padding and width are calculated correctly */
-}
-
-.text {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-	text-overflow: ellipsis; 
-	margin-bottom: 1rem;
-	font-size: 1.01rem !important;
-    overflow: hidden;
-}
-
-.card-alt {
-    flex: 1 1 calc(50% - 20px);
-	display: flex;
-	flex-direction: column;  /* Stack elements vertically */
-    justify-content: flex-start;/* Each card takes up 1/3 of the width minus gap */
-    max-width: calc(50% - 20px); /* Ensure it never exceeds 1/3 */
     background: white;
     padding: .4em;
     border-radius: 6px;
@@ -161,7 +137,8 @@ input, select, textarea {
     padding-bottom: 100%;
 	border-radius: 6px 6px 0 0;
   }
-  .card-image {
+
+  .card-image-alt {
 	background-color: rgb(236, 236, 236);
 	width: 100%;
 	height: 0;
@@ -169,17 +146,6 @@ input, select, textarea {
 	position: relative;
     overflow: hidden;
     padding-bottom: 100%;
-	border-radius: 6px 6px 0 0;
-  }
-
-  .card-image-alt-alt {
-	background-color: rgb(236, 236, 236);
-	width: 100%;
-	height: 0;
-	/* overflow: hidden; */
-	position: relative;
-    overflow: hidden;
-    padding-bottom: 50%;
 	border-radius: 6px 6px 0 0;
 	border-radius: 6px 6px 0 0;
   }
@@ -190,26 +156,17 @@ input, select, textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the square without distortion */
+    object-fit: contain; /* Ensures the image fills the square without distortion */
     transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
 	}
 
-	.card-image-alt-alt img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover; /* Ensures the image fills the square without distortion */
-		transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
-		}
 	.card-image-alt img {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: contain; /* Ensures the image fills the square without distortion */
+		object-fit: cover; /* Ensures the image fills the square without distortion */
 		transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
 	}
 
@@ -262,188 +219,7 @@ input, select, textarea {
   .category:hover {
 	cursor: pointer;
   }
-
-  .hamburger {
-    display: none; /* Hide by default */
-    cursor: pointer;
-    background: none;
-    border: #333;
-    outline: none;
-}
-
-.hamburger-bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 4px auto;
-    background-color: #333;
-}
-
-.mobile-menu {
-    display: none; /* Hide by default */
-	position: absolute; /* Position the menu absolutely */
-    right: 0; 
-	top : 100%;
-	background-color: #fff; /* Set the background color */
-    border: 1px solid #ccc; /* Add a border */
-    width: 100%; /* Set the width */
-    padding: 10px; /* Add some padding */
-    border-radius: 5px; /* Round the corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a shadow */
-	border: none;
-    outline: none;
-}
-
-.mobile-menu a {
-    display: block; /* Make the links block elements */
-    margin-top: 10px;
-	margin-bottom: 10px; /* Add some space below each link */
-    text-decoration: none; /* Remove the underline */
-    color: #333; /* Set the text color */
-}
-    /* Add your own styles here */
-
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
   
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: tomato;
-}
-
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
   .heading {
 	color: #3c3b3b;
 	font-family: "Raleway", Helvetica, sans-serif;
@@ -2286,14 +2062,11 @@ input, select, textarea {
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.6em;
 		font-weight: 800;
-		height: 4.2em;
+		height: 4.8125em;
 		letter-spacing: 0.25em;
 		line-height: 4.8125em;
-		padding: 0 2em;
+		padding: 0 2.5em;
 		text-align: center;
-		align-items: center;
-		display: flex;
-		justify-content: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
@@ -2746,19 +2519,11 @@ input, select, textarea {
 				width: 100%;
 			}
 
-			@media screen and (max-width: 980px) {
-				
+			@media screen and (max-width: 736px) {
+
 				.image.featured {
 					margin: 0 0 1.5em 0;
 				}
-				.side-to-side {
-					flex-direction: column; /* Stack cards vertically */
-					gap: 20px; /* Add vertical space between the cards */
-				}
-				.hamburger {
-					display: block; /* Show on small screens */
-				}
-				
 
 			}
 
@@ -3112,58 +2877,55 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-		@media screen and (max-width: 980px) {
-			.side-to-side {
+		@media screen and (max-width: 1280px) {
+
+			.mini-posts {
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
 				display: flex;
+				-moz-flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
 				flex-wrap: wrap;
-				gap: 20px;
-				justify-content: flex-start;
-				flex-direction: row;
-			}
-			.card {
-				flex: 1 1 calc(50% - 20px);
-				display: flex;
-				flex-direction: column;  /* Stack elements vertically */
-				/* justify-content: flex-start;Each card takes up 1/3 of the width minus gap */
-				max-width: calc(50% - 20px); /* Ensure it never exceeds 1/3 */
-				background: white;
-				padding: .4em;
-				border-radius: 6px;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-				padding-bottom: 20px;
-				box-sizing: border-box; /* Ensure padding and width are calculated correctly */
-			}
-			.card-alt {
-				flex: 1 1 calc(50% - 20px);
-				display: flex;
-				flex-direction: column;  /* Stack elements vertically */
-				justify-content: flex-start;/* Each card takes up 1/3 of the width minus gap */
-				max-width: calc(50% - 20px); /* Ensure it never exceeds 1/3 */
-				background: white;
-				padding: .4em;
-				border-radius: 6px;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-				padding-bottom: 20px;
-				box-sizing: border-box; /* Ensure padding and width are calculated correctly */
+				width: calc(100% + 2em);
 			}
 
-			.hamburger {
-				display: block; /* Show on small screens */
-			}
+				.mini-posts > * {
+					margin: 2em 2em 0 0;
+					width: calc(50% - 2em);
+				}
+
+				.mini-posts > :nth-child(-n + 2) {
+					margin-top: 0;
+				}
+
 		}
+
 		@media screen and (max-width: 480px) {
 
-			.card {
-				flex: 1 1 100%; /* Each card takes up 100% of the width */
-				max-width: 100%; /* Ensure it never exceeds 100% */
+			.mini-posts {
+				display: block;
+				width: 100%;
 			}
 
-			.card-alt {
-				flex: 1 1 100%; /* Each card takes up 100% of the width */
-				max-width: 100%; /* Ensure it never exceeds 100% */
-			}
+				.mini-posts > * {
+					margin: 0 0 2em 0;
+					width: 100%;
+				}
+
 		}
 
+/* Post */
+
+	/* .post {
+		padding: 3em 3em 1em 3em ;
+		background: #ffffff;
+		border: solid 1px rgba(160, 160, 160, 0.3);
+		margin: 0 0 3em 0;
+		position: relative;
+	} */
+/* Container for posts, flexbox to arrange in columns */
 .post-container {
     display: flex;
     flex-wrap: wrap;  /* Allows cards to wrap when needed */
@@ -3555,7 +3317,7 @@ input, select, textarea {
 /* Header */
 
 	body {
-		padding-top: 0.5em;
+		padding-top: 3.5em;
 	}
 
 	#header {
@@ -3569,9 +3331,9 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #ffffff;
 		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
-		height: 2.5em;
+		height: 3.5em;
 		left: 0;
-		line-height: 2.5em;
+		line-height: 3.5em;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -3697,6 +3459,7 @@ input, select, textarea {
 							top: 0;
 							width: inherit;
 						}
+
 		#header form {
 			margin: 0;
 		}
@@ -3742,8 +3505,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				height: 2.5em;
-				line-height: 2.5em;
+				height: 2.75em;
+				line-height: 2.75em;
 			}
 
 				#header h1 {
@@ -3858,19 +3621,30 @@ input, select, textarea {
 
 	#intro .logo {
 		border-bottom: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		display: inline-block;
 		margin: 0 0 1em 0;
 		overflow: hidden;
 		position: relative;
 		width: 4em;
 	}
 
+		#intro .logo:before {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100px' height='100px' viewBox='0 0 100 100' preserveAspectRatio='none' zoomAndPan='disable'%3E%3Cpolygon points='0,0 100,0 100,25 50,0 0,25' style='fill:%23f4f4f4' /%3E%3Cpolygon points='0,100 100,100 100,75 50,100 0,75' style='fill:%23f4f4f4' /%3E%3C/svg%3E");
+			background-position: top left;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			content: '';
+			display: block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
 		#intro .logo img {
 			display: block;
-			margin: 0 auto;
-			/* margin-left: -0.25em; */
+			margin-left: -0.25em;
 			width: 4.5em;
 		}
 
